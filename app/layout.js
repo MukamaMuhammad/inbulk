@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import GoogleAnalytics from "@components/GoogleAnalytics";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 
@@ -15,6 +16,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        {process.env.GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.GOOGLE_ANALYTICS} />
+        ) : null}
         <Navbar />
         {children}
         <Footer />
