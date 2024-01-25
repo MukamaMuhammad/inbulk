@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
-// import GoogleAnalytics from "@components/GoogleAnalytics";
+import Head from "next/head";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 
@@ -16,6 +16,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js? 
+            id=${process.env.GOOGLE_ANALYTICS}`}
+        ></Script>
+        <Script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+      
+                gtag('config', '${process.env.GOOGLE_ANALYTICS}');
+              `,
+          }}
+        ></Script>
+      </Head>
       <body>
         {process.env.GOOGLE_ANALYTICS ? (
           <>
