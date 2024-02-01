@@ -67,7 +67,7 @@ const page = () => {
         <Button onClick={generateQrCodes}>Generate Qr Code(s)</Button>
         <div>
           <ScrollArea className="md:h-[60vh] h-[40vh] w-[80vw] rounded-md border p-3">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
               {qrCodes.map(({ dataUrl, name }, index) => (
                 <div
                   key={index}

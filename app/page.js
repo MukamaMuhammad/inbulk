@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import Landing from "@components/Landing/landing";
 
 export default function Home() {
   return (
-    <section class="text-gray-600 body-font h-[80vh]">
-      <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+    <section class="text-gray-600 body-font">
+      <Landing />
+      {/* <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
         <div class="text-center lg:w-2/3 w-full">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
             Welcome to InBulk tools
@@ -27,7 +29,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

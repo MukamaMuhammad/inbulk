@@ -29,8 +29,19 @@ const Navbar = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
-                <NavigationMenuContent className="flex flex-col justify-center gap-2 p-2 w-40 md:w-40 text-sm font-semibold">
+                <NavigationMenuTrigger className="text-gray-800 font-extrabold">
+                  Tools
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="flex flex-col justify-center gap-2 p-2 w-44 md:w-44 text-sm font-medium">
+                  <NavigationMenuLink>
+                    <Link
+                      href={"/"}
+                      class="mr-5 hover:text-gray-900 cursor-pointer"
+                    >
+                      Url Indexer
+                    </Link>
+                  </NavigationMenuLink>
+                  <Separator />
                   <NavigationMenuLink>
                     <Link
                       href={"/image-compressor"}
@@ -46,7 +57,7 @@ const Navbar = () => {
                       href={"/qrcode-generator"}
                       class="mr-5 hover:text-gray-900 cursor-pointer"
                     >
-                      Qrcode Generator
+                      Qr Code Generator
                     </Link>
                   </NavigationMenuLink>
                   <Separator />
@@ -56,7 +67,7 @@ const Navbar = () => {
                       href={"/barcode-generator"}
                       class="mr-5 hover:text-gray-900 cursor-pointer"
                     >
-                      Barcode Generator
+                      BarCode Generator
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuContent>
@@ -65,7 +76,7 @@ const Navbar = () => {
           </NavigationMenu>
         </nav>
         <a href="mailto:lolentimuhammad2@gmail.com">
-          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 text-gray-800 font-extrabold">
             Contact
             <svg
               fill="none"
