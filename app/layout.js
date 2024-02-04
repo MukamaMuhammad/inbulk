@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import Head from "next/head";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 
@@ -16,6 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="saashub-verification" content="264pl0nhkfzo" />
+      </Head>
       <body>
         {process.env.GOOGLE_ANALYTICS ? (
           <>
